@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Insertar usuario</title>
+</head>
+<body>
+	<form action = "usuario.php" method = "post" name = "form">
+	
+		Numero de identificaci&oacute;n*: <input type = "text" name = "identificacion">
+		<input type = "submit" name = "buscar" value = "Buscar Usuario"></br></br>
+		
+		Nombre*:   <input type = "text" name = "nombre">
+		Apellido1*:    <input type = "text" name = "apellido1"> 
+		Apellido 2:   <input type = "text" name = "apellido2"></br></br>
+	  
+		Numero de Telefono:<input type = "text" name = "telefono"> </br></br>
+	  
+		Usuario*:<input type = "text" name = "usuario"> </br></br>
+	     
+		Contrase&ntilde;a*:   <input type = "password" name = "pw">
+		Repetir Contrase&ntilde;a*:   <input type = "password" name = "pw2"> </br></br>
+		
+		Rol:
+		<select name = "rol">
+		  <option value= 1>Administrador</option>
+		  <option value= 2>Cajero</option>
+		  <option value= 3>Bodeguero</option>
+		</select>
+		</br></br>
+	  
+		<input type = "submit" name = "agregar" value = "Agregar">
+		<input type = "submit" name = "modificar" value = "Modificar">
+			
+</body>
+</html>
