@@ -8,7 +8,7 @@ Values ('$_POST[id]' ,'$_POST[nombre]' ,'$_POST[marca]' ,'$_POST[unidad]' ,'$_PO
 pg_query($conec,$query) or die('La consulta fallo: ' . pg_last_error());
 
 echo "Producto Agregado";
-header('Location: http://localhost/Punto_de_Venta/Producto/Producto.html');
+header('Location:./producto.html');
 }
 if ($_POST['modificar'])
 {
@@ -21,7 +21,7 @@ WHERE id_producto = '$_POST[id]'";
 pg_query($conec,$query) or die('La consulta fallo: ' . pg_last_error());
 
 echo "Producto Modificado";
-header('Location: http://localhost/Punto_de_Venta/Producto/Producto.html');
+header('Location:./producto.html');
 }
 
 if ($_POST['buscar'])
