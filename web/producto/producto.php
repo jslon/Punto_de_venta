@@ -26,7 +26,6 @@ header('Location:./producto.html');
 
 if ($_POST['buscar'])
 {
-	
 	$conec = pg_connect("host=localhost  dbname=Punto_Venta user=postgres password=ECCIpsql2015 ") or die("problemas de coneccion " . pg_last_error());
 
 $query = $query = "SELECT id_producto, cantidad, nombre, marca, unidad, minimo
@@ -35,6 +34,7 @@ $query = $query = "SELECT id_producto, cantidad, nombre, marca, unidad, minimo
 $result = pg_query($conec,$query) or die('La consulta fallo: ' . pg_last_error());
 
 	while ($row = pg_fetch_row($result))
+	
 	{
 		echo "<html>";
 			echo "	<body>";
