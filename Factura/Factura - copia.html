@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Factura</title>
+
+  </head>
+  <body>
+	<form action = "Factura.php" method = "post" name = "form">
+    <div id="base" class="">
+		
+		<label>Numero de Factura: </label>Aqui va la consulta del numero de factura//insert factura<?php echo $num_factura;?>
+		<br>
+		
+		<input type="checkbox" name="ChkCodigoBarras" value="Codigo" checked = "true"> Codigo de Barras &nbsp;
+		<input type="textbox" name="TxtCodigoBarra">
+		<button type="submit" name ="BtnCodBarra">Agregar a Factura</button>//Modifica cantidad en tabla producto suma la variable subtotal 
+		y lo agrega a textArea
+		<br>
+		<br>
+		
+		<textarea name="TxtAreaProductos"></textarea>
+		<br>
+		<br>
+		
+		<label>SubTotal: </label>
+		<input type="textbox" name="TxtSubTotal"> suma todos los precios que ha agregado a la factura 
+		<br>
+		
+		<label>IVA: </label>
+		<input type="textbox" name="TxtInpuesto" value = "13%" enabled = "false">
+		<br>
+		
+		<label>Descuento: </label>
+		<input type="textbox" name="TxtDescuento">
+		<br>
+		
+		<label>Total: </label>
+		<input type="textbox" name="TxtTotal">
+		<br>
+		
+		<label>Fecha: </label>
+		<input type="textbox" name="TxtFecha">
+		<br>
+		
+		<button type="submit" name ="BtnImprimir">Efectuar Pago</button> //Consulto datos de la empresa, usuario e imprimo lo que se compro
+		
+		
+    </div>
+  </body>
+</html>
