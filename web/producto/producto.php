@@ -1,10 +1,12 @@
 <?php
+
+$_empresa=1;
 if ($_POST['insertar'])
 {
 $conec = pg_connect("host=localhost  dbname=Punto_Venta user=postgres password=ECCIpsql2015 ") or die("problemas de coneccion " . pg_last_error());
 
 $query = "INSERT INTO producto(id_producto,nombre,marca,unidad,cantidad,minimo,empresa) 
-Values ('$_POST[id]' ,'$_POST[nombre]' ,'$_POST[marca]' ,'$_POST[unidad]' ,'$_POST[cantidad]' ,'$_POST[minimo]','1')";
+Values ('$_POST[id]' ,'$_POST[nombre]' ,'$_POST[marca]' ,'$_POST[unidad]' ,'$_POST[cantidad]' ,'$_POST[minimo]','$_empresa')";
 pg_query($conec,$query) or die('La consulta fallo: ' . pg_last_error());
 
 echo "Producto Agregado";
