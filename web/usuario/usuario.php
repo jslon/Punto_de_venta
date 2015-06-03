@@ -10,7 +10,7 @@
 			($_POST['identificacion']) && !empty($_POST['identificacion']) && ($_POST['usuario']) && !empty($_POST['usuario']) && ($_POST['pw2']) && !empty($_POST['pw2'])){
 			
 			if( $_POST['pw'] == $_POST['pw2']){
-				$con = pg_connect("host=localhost:8080  dbname=Punto_Venta user=postgres password=ECCIpgsql2015 ") or die("problemas de conecci&oacute;n " . pg_last_error()); 
+				$con = pg_connect("host=localhost dbname=Punto_Venta user=postgres password=aguilarsql ") or die("problemas de conecci&oacute;n " . pg_last_error()); 
 				$dat = "INSERT INTO usuario(  id_usuario,nombre,apellido1, apellido2,password, usuario , rol, empresa )
 						VALUES ( '$_POST[identificacion]' , '$_POST[nombre]' , '$_POST[apellido1]', '$_POST[apellido2]', '$_POST[pw]', '$_POST[usuario]', '$_POST[rol]', $id_empresa);";
 				$result = pg_query($con,$dat) or die('La consulta fallo: ' . pg_last_error());
@@ -24,7 +24,7 @@
 		else{
 			echo "problemas al insertar datos"; 
 		}
-		//header('Location:./usuario.html');
+		header('Location:./usuario.html');
 	}
 	if ($_POST['modificar'])
 	{
